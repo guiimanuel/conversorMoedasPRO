@@ -1,11 +1,9 @@
-import * as React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native'
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import loginScreen from './src/screens/loginScreen';
+import { initializeApp } from "firebase/app";
 import initialScreen from './src/screens/initialScreen';
+import loginScreen from './src/screens/loginScreen';
 import registerScreen from './src/screens/registerScreen';
 
 const Stack = createNativeStackNavigator();
