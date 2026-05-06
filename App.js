@@ -27,7 +27,7 @@ function App() {
   return (
     <NavigationContainer>
 
-      <Stack.Navigator initialRouteName='login'>
+      <Stack.Navigator initialRouteName='initial'>
 
         <Stack.Screen
           name="login"

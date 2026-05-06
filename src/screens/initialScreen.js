@@ -7,29 +7,21 @@ import api from '../services/api';
 function initialScreen({ navigation }) {
     const fontePlayfairBold = { fontFamily: 'PlayfairDisplay-Bold' };
 
+    {/* Função para obter a URL da bandeira com base no código da moeda */ }
     function getFlagUrl(code) {
         const map = {
-            USD: 'us',
-            BRLT: 'br',
-            EUR: 'eu',
-            GBP: 'gb',
-            ARS: 'ar',
             BTC: 'btc',
             LTC: 'ltc',
-            JPY: 'jp',
-            CHF: 'ch',
-            AUD: 'au',
-            CNY: 'cn',
-            ILS: 'il',
             ETH: 'eth',
             XRP: 'xrp',
             DOGE: 'doge',
-            BRL: 'br',
-            CAD: 'ca'
         };
+        const flag = code.substring(0, 2).toLowerCase();
         const country = map[code];
-        if (!country) return null;
-        return `https://flagcdn.com/w80/${country}.png`;
+        if (country) {
+            return `https://flagcdn.com/w80/${country}.png`;
+        }
+        return `https://flagcdn.com/w80/${flag}.png`;
     }
 
     const [cotacoes, setCotacoes] = useState([]);
