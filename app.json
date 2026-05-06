@@ -2,6 +2,11 @@
   "expo": {
     "name": "logincadFIREBASE2",
     "slug": "logincadFIREBASE2",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "e822f066-eecd-4c3a-99c3-5c0e42bd709f"
+      }
+    }
   }
 }
